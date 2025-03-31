@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Personas y Transferencia de Datos</title>
+    <style>
+        table, th, td { border: 1px solid black; border-collapse: collapse; padding: 8px; margin: 10px 0; }
+        h2 { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Gestión de Personas y Transferencia de Datos</h1>
+    
+    <!-- Tabla de Personas -->
+    <h2>Tabla de Personas</h2>
+    <table id="personasTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Género</th>
+                <th>IMC</th>
+                <th>Peso</th>
+                <th>Estatura</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="personasBody"></tbody>
+    </table>
+
+    <!-- Tabla de Data Mart -->
+    <h2>Tabla de Data Mart</h2>
+    <table id="datamartTable">
+        <thead>
+            <tr>
+                <th>ID Paciente</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Género</th>
+                <th>IMC</th>
+                <th>Peso</th>
+                <th>Estatura</th>
+            </tr>
+        </thead>
+        <tbody id="datamartBody"></tbody>
+    </table>
+
+    <!-- Formulario para agregar personas -->
+    <h2>Agregar Persona</h2>
+    <form id="personaForm">
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="genero" placeholder="Género" required>
+        <input type="number" id="edad" placeholder="Edad" required>
+        <input type="number" id="imc" placeholder="IMC" required>
+        <input type="number" id="peso" placeholder="Peso" required>
+        <input type="number" id="estatura" placeholder="Estatura" required>
+        <button type="submit">Agregar</button>
+    </form>
+
+    <!-- Botón para ejecutar el proceso ETL -->
+    <h2>Transferir Datos a Data Mart</h2>
+    <button id="ejecutarETL">Transferir Datos</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
